@@ -1,5 +1,8 @@
 # Functions
 
+<img src="https://raw.githubusercontent.com/theFuncTions/Functions/main/Functions.png" alt="Functions.png">
+
+
 <img src="https://forthebadge.com/images/featured/featured-built-with-love.svg">
 <img src="https://forthebadge.com/images/badges/built-for-android.svg">
 
