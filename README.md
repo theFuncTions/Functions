@@ -1,4 +1,8 @@
 # Functions
+
+<img src="https://forthebadge.com/images/featured/featured-built-with-love.svg">
+<img src="https://forthebadge.com/images/badges/built-for-android.svg">
+
 An Extension to work with UI Functions of AI2
 
 # Difference with Itoo and Dynamic Components
