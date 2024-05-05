@@ -119,7 +119,4 @@ public class Functions extends AndroidNonvisibleComponent {
                 })
                 .show();
     }
-
-   @SimpleFunction
-   public void 
 }
