@@ -2,6 +2,7 @@ package com.brandonang.functions;
 
 import com.google.appinventor.components.annotations.SimpleFunction;
 import com.google.appinventor.components.annotations.SimpleEvent;
+import com.google.appinventor.components.annotations.SimpleProperty;
 import com.google.appinventor.components.runtime.AndroidNonvisibleComponent;
 import com.google.appinventor.components.runtime.ComponentContainer;
 import com.google.appinventor.components.runtime.EventDispatcher;
@@ -25,6 +26,7 @@ public class Functions extends AndroidNonvisibleComponent {
     private Activity activity;
     private Context context;
     private Button button;
+    private String txtBoxText;
 
     public Functions(ComponentContainer container) {
         super(container.$form());
@@ -53,6 +55,7 @@ public class Functions extends AndroidNonvisibleComponent {
 
     @SimpleFunction
     public void CreateTextBox(HVArrangement layout, String hint, String text){
+        txtBoxText = text;
         View view = layout.getView();
         EditText textBox = new EditText(this.context);
         textBox.setHint(hint);
@@ -119,4 +122,18 @@ public class Functions extends AndroidNonvisibleComponent {
                 })
                 .show();
     }
+
+   @SimpleFunction
+   public void CreateLabel(HVArrangement layout, String text) {
+    View view = layout.getView();
+    TextView label = new TextView(this.context);
+    label.setText(text);
+    FrameLayout frameLayout = (FrameLayout) view;
+    frameLayout.addView(label);
+  }
+
+  @SimpleProperty
+  public String TextBoxText() {
+    return txtBoxText;
+  }
 }
