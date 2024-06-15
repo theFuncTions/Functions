@@ -1,4 +1,4 @@
-package com.brandonang.functions;
+package com.bextdev.functions;
 
 import com.google.appinventor.components.annotations.SimpleFunction;
 import com.google.appinventor.components.annotations.SimpleEvent;
@@ -90,7 +90,7 @@ public class Functions extends AndroidNonvisibleComponent {
     }
 
     @SimpleFunction
-    public void CreateChooseNotifier(String title, String message, String button1Text, String button2Text){
+    public void CreateChooseNotifier(String title, String message, String button1Text, String button2Text, boolean cancelable){
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
         builder.setTitle(title)
                 .setMessage(message)
@@ -107,6 +107,15 @@ public class Functions extends AndroidNonvisibleComponent {
                     }
                 })
                 .show();
+
+                if(cancelable){
+                  builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener(){
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) { }
+                  }
+                   builder.show();
+            }
+                  
     }
 
     @SimpleFunction
